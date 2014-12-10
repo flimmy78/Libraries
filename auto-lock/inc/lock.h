@@ -9,11 +9,11 @@ class ILock
 public:
     ILock() {}
     virtual ~ILock() {}
- 
+
     virtual void Lock() const = 0;
     virtual void Unlock() const = 0;
 };
- 
+
 //mutex class
 class CMutex : public ILock
 {
@@ -25,7 +25,8 @@ public:
     virtual void Unlock() const;
 
 private:
-    mutable pthread_mutex_t m_mutex;
+    mutable pthread_mutex_t     m_mutex;
+    pthread_mutexattr_t             m_attr;
 };
 
 //auto lock

@@ -1,8 +1,12 @@
+#include <assert.h>
 #include "lock.h"
 
 CMutex::CMutex()
 {
     pthread_mutex_init(&m_mutex, NULL);
+    assert(0 == pthread_mutexattr_init(&m_attr));
+    pthread_mutexattr_settype(&m_attr, PTHREAD_MUTEX_RECURSIVE);
+    assert(0 == pthread_mutex_init(&m_mutex, &m_attr));
 }
 
 CMutex::~CMutex()
