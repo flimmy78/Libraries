@@ -3,6 +3,8 @@
 
 #include <pthread.h>
 
+namespace lilingshui
+{
 //interface
 class ILock
 {
@@ -39,5 +41,6 @@ public:
 private:
     const ILock& m_lock;
 };
+}
 
 #endif //NH_Lock_H

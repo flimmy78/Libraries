@@ -2,6 +2,8 @@
 #include <unistd.h>
 #include "lock.h"
 
+using namespace lilingshui;
+
 CMutex g_Lock;
 
 void * StartThread(void *pParam)
