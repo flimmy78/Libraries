@@ -28,7 +28,7 @@ public:
 
 private:
     mutable pthread_mutex_t     m_mutex;
-    pthread_mutexattr_t             m_attr;
+    pthread_mutexattr_t         m_attr;
 };
 
 //auto lock
