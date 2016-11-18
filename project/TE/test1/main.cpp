@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdio.h>
-#include <log.h>
+#include "logexport.h"
 
 
 int main(int argc, char** argv)

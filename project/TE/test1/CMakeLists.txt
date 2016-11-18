@@ -1,5 +1,4 @@
-SET (SRC_LIST 	main.cpp
-		../Utils/src/log.cpp)
+SET (SRC_LIST 	main.cpp)
 
 ADD_EXECUTABLE(test1 ${SRC_LIST})
-
+TARGET_LINK_LIBRARIES(test1 log)
